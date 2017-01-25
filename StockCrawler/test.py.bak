@@ -1,0 +1,55 @@
+import urllib.request
+
+link = "https://tomcat.server.org:8443/html/scripts/servers.jsp"
+userpass = {'pass': '12345', 'user': 'admin'}
+
+data = urllib.parse.urlencode(userpass)
+data = data.encode('utf-8') 
+req = urllib.request.Request(link, data)
+resp = urllib.request.urlopen(req)
+respData = resp.read()
+
+saveFile = open(Myfile.csv,'w')
+saveFile.write(str(respData))
+saveFile.close()# from urllib.request import urlopen
+# from urllib import *
+
+# response = urlopen('http://www.voidspace.org.uk')
+# the_page = response.read()
+# print(the_page)
+# r = urllib2.urlopen('http://lenta.ru')
+# _, params = cgi.parse_header(r.headers.get('Content-Type', ''))
+# encoding = params.get('charset', 'utf-8')
+# unicode_text = r.read().decode(encoding)
+# # from urllib.request import urlopen
+# from selenium import webdriver
+# from selenium.webdriver.common.keys import Keys
+
+# # driver = webdriver.Firefox()
+# # print("webdriver")
+# # driver.get("http://www.python.org")
+# # print("get driver by certain page")
+# # # assert "Python" in driver.title
+# # # elem = driver.find_element_by_name("q")
+# # # elem.clear()
+# # # elem.send_keys("pycon")
+# # # elem.send_keys(Keys.RETURN)
+# # # assert "No results found." not in driver.page_source
+# # driver.close()
+
+
+
+# # response = urlopen("http://www.petronet.co.kr/")
+# response = urlopen("http://www.petronet.co.kr/v3/index.jsp")
+# if 'text/html' in response.getheader('Content-Type'):
+#     html_bytes = response.read()
+#     mystr = html_bytes.decode("utf-8", "replace")
+# print(mystr)
+# # f = open('workfile', 'w')
+# # f.write(mystr)
+# # print(mystr)
+
+# # r = urllib2.urlopen('http://lenta.ru')
+# # _, params = cgi.parse_header(r.headers.get('Content-Type', ''))
+# # encoding = params.get('charset', 'utf-8')
+# # unicode_text = r.read().decode(encoding)

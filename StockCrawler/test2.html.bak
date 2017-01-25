@@ -1,0 +1,667 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<meta name="subject" content="" />
+<meta name="title" content="" />
+<meta name="keywords" content="" />
+<meta name="date" content="2010-08-24" />
+<title>***  P/E/T/R/O/N/E/T</title>
+<!--
+<OBJECT ID='MaWebSAFER_KNOC' width='0' height='0' CLASSID='CLSID:5EEEED09-E7C2-4931-BF58-FB1562A29B76'> </OBJECT>
+-->
+<link href="/v3/css/main_base.css" rel="stylesheet" type="text/css" />
+<link href="/v3/css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript"  src="/v3/js/common.js"></script>
+<script language="javascript" src="/inc/default.js"></script>
+<script type="text/javascript" src="/voicemonds/voicemonDS.js"></script>
+<!--
+<script language="javascript">
+        function checkInstall()
+        {
+                if((typeof(MaWebSAFER_KNOC) == "object") && (MaWebSAFER_KNOC.object != null))
+                {
+                        alert("   . ")
+                }
+
+                else
+                {
+
+                        top.document.location.href="/markany/MaWebSAFER_KNOC.exe";
+                }
+        }
+</script>
+-->
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+        if(self != window.top) location.href="about:blank";
+//-->
+</SCRIPT>
+<!--  -->
+<script language="JavaScript">
+document.onkeydown = function() {
+        if (event.keyCode == 116 || event.keyCode == 122) {
+                event.keyCode = 505;
+        }
+        if (event.keyCode == 505) {
+                return false;
+        }
+}
+
+  var n4 = (document.layers)?true:false;
+  var e4 = (document.all)?true:false;
+  var Searching
+
+function popup() {
+    noticeWindow  =  window.open('/htm/pet/etc/notify.html','popup','left=200, top=200, width=355,height=260, scrollbars=no');
+    noticeWindow.opener = self;
+}
+</script>
+
+<script language="javascript">
+
+function chgMain(id1,id2){
+        document.getElementById('img_'+id1).src='/v3/images/main/h'+id1+'_on.gif';
+        document.getElementById('img_'+id2).src='/v3/images/main/h'+id2+'.gif';
+        document.getElementById(id1).style.display='block';
+        document.getElementById(id2).style.display='none';
+        if(id1=='2_update'){
+                //document.getElementById(id1+'_more').style.display='block';
+        }else if(id1=='2_favorite_news'){
+                //document.getElementById('2_notice_more').style.display='none';
+        }
+}
+function chgMain2(id1,id2){
+        if(id1=='c3'){
+                document.getElementById('img_c3').src='/v3/images/main/h3_today_oil_coast_inter_on.gif';
+                document.getElementById('img_c4').src='/v3/images/main/h3_today_oil_coast_kr.gif';
+        } else {
+                document.getElementById('img_c3').src='/v3/images/main/h3_today_oil_coast_inter.gif';
+                document.getElementById('img_c4').src='/v3/images/main/h3_today_oil_coast_kr_on.gif';
+        }
+        loadChart(id1);
+}
+function showPop(num,id1,img,urlType,url){
+
+        if(num==5){
+                document.getElementById('num1').src='/v3/images/main/img_popupzone_num1.gif';
+                document.getElementById('num2').src='/v3/images/main/img_popupzone_num2.gif';
+                document.getElementById('num3').src='/v3/images/main/img_popupzone_num3.gif';
+                document.getElementById('num4').src='/v3/images/main/img_popupzone_num4.gif';
+                document.getElementById('num5').src='/v3/images/main/img_popupzone_num5.gif';
+        } else if(num==4){
+                document.getElementById('num1').src='/v3/images/main/img_popupzone_num1.gif';
+                document.getElementById('num2').src='/v3/images/main/img_popupzone_num2.gif';
+                document.getElementById('num3').src='/v3/images/main/img_popupzone_num3.gif';
+                document.getElementById('num4').src='/v3/images/main/img_popupzone_num4.gif';
+        } else if(num==3){
+                document.getElementById('num1').src='/v3/images/main/img_popupzone_num1.gif';
+                document.getElementById('num2').src='/v3/images/main/img_popupzone_num2.gif';
+                document.getElementById('num3').src='/v3/images/main/img_popupzone_num3.gif';
+        } else if(num==2){
+                document.getElementById('num1').src='/v3/images/main/img_popupzone_num1.gif';
+                document.getElementById('num2').src='/v3/images/main/img_popupzone_num2.gif';
+        }
+
+        document.getElementById(id1).src='/v3/images/main/img_popupzone_'+id1+'_on.gif';
+
+        document.getElementById("popLink").href = 'javascript:openWindows('+url+');'+'' ;
+        document.getElementById("popImg").src = '/dvboard/popZone/upload/'+img;
+}
+
+function login_v3()
+{
+
+
+        var form = document.login ;
+        if(form.id.value == '')  { alert('  '); form.id.focus(); return false;}
+        if(form.passwd.value == '')  { alert('  '); form.passwd.focus(); return false;}
+        if(form.secure.checked){
+
+                form.action = "https://www.petronet.co.kr/servlet/v3.member.LoginProc";
+                //form.action = "/servlet/v3.member.LoginProc";
+        form.submit();
+        }
+        else
+    {
+        form.action = "/servlet/v3.member.LoginProc";
+        form.submit();
+    }
+ }
+function init() {
+
+
+//if ( getCookie( "30dc" ) != "done" ) {
+//        noticeWindow  = window.open('/yearbook/yearbook_info.html','notice','left=50,scrollbars=yes, top=0, width=510, height=560');
+//      noticeWindow.opener = self;
+//  }
+
+
+
+
+
+
+                //UseLayer('g');
+
+
+        //if(document.login != null) {
+        //  document.login.id.value = getCookie('ByDal');
+        //  if(document.login.id.value != '')
+        //        document.login.passwd.focus();
+        //  else
+        //        document.login.id.focus();
+        //}
+
+
+
+
+
+
+
+
+        //  .
+        animatePopup();
+}
+function move(strURL) {
+
+    var StrVal1 = strURL;
+    var SP1 = StrVal1.indexOf("'") + 1;
+    var StrVal2 = StrVal1.substring(SP1, StrVal1.length);
+    var EP1 = StrVal2.indexOf("'");
+    var StrVal3 = StrVal2.substring(EP1+1, StrVal2.length);
+    var SP2 = StrVal3.indexOf("'") + 1;
+    var StrVal4 = StrVal3.substring(SP2, StrVal3.length);
+    var EP2 = StrVal4.indexOf("'");
+    var StrVal5 = StrVal4.substring(EP2+1, StrVal4.length);
+    var SP3 = StrVal5.indexOf("'") + 1;
+    var StrVal6 = StrVal5.substring(SP3, StrVal5.length);
+    var EP3 = StrVal5.indexOf("'");
+
+    var form =  document.subFrame ;
+    form.leftURL.value = StrVal1.substring(SP1, SP1+EP1) ;
+    form.bodyURL.value = StrVal3.substring(SP2, SP2+EP2) ;
+    form.gubun.value = StrVal5.substring(SP3, SP3+EP3) ;
+    form.action = "/main2.jsp" ;
+    form.target="_top";
+    form.submit();
+}
+function site_openBrWindow(gData) {
+
+        var gData = gData.split("%%");
+        var theURL = gData[0];
+        var winName = gData[1];
+        var features = gData[2];
+
+        if(gData != ""){
+                window.open(theURL,winName,features);
+        }
+}
+
+function loadMenuInfo(id){
+
+        document.getElementById("i1").style.display='none';
+        document.getElementById("i2").style.display='none';
+        document.getElementById("i3").style.display='none';
+        document.getElementById("i4").style.display='none';
+        document.getElementById(id).style.display='block';
+
+}
+
+function loadChart(id){
+
+        document.getElementById("today_oil_c1").style.display = 'none';
+//      document.getElementById("today_oil_c2").style.display='none';
+        document.getElementById("today_oil_c3").style.display='none';
+        document.getElementById("today_oil_c4").style.display='none';
+        document.getElementById("today_oil_c5").style.display='none';
+
+        document.getElementById("today_oil_"+id).style.display='block';
+
+}
+
+function openWindows(filename,mode,w,h){
+          var winl = (screen.width - w) / 2;
+          var wint = (screen.height - h) / 2;
+          var settings ='toolbar=1,directories=0,status=yes,menubar=1,scrollbars=1,resizable=yes,height='+h+',width='+w+',top='+wint+',left='+winl;
+          winObj = window.open(filename, "popInput", settings);
+}
+
+function OpenWindow(URL,Name,Features){
+        window.open(URL,Name,Features);
+}
+
+</script>
+<script type="text/javascript">
+        //
+        var popAniCnt = 0 ;
+        var iv = null;
+        var popAniInterval = 6000;  //
+        var imgData = new Array();
+        function showPopImages(num) {
+                //alert(num);
+                var popLink = document.getElementById("popLink" + (num+1));
+                var popImages = document.getElementById("popImg" + (num+1));
+                //alert(popImages.src);
+                if(popLink!= null){
+                        popLink.href=imgData[num].src;
+                        popLink.target=imgData[num].target;
+
+                }
+
+                popImages.src= "/dvboard/popZone/upload/"+imgData[num].imgpath;
+                popImages.alt=imgData[num].alt
+                for(i=0;i<imgData.length;i++) {
+                        var btn = document.getElementById("popNum" + (i+1));
+                        var popup = document.getElementById("popImg" + (i+1));
+                        if(i == num) {
+                                btn.src="/v3/images/main/img_popupzone_num"+(i+1)+"_on.gif";
+                                //popup.style.display = "block";
+                                popup.style.display = "block";
+                        }
+                        else {
+                                btn.src="/v3/images/main/img_popupzone_num"+(i+1)+".gif";
+                                //popup.style.display = "none";
+                                popup.style.display = "none";
+                        }
+                }
+        }
+
+        function animatePopup(){
+                popAniCnt = 0;
+                if(iv) window.clearInterval(iv);
+                iv = window.setInterval("showAnimate()",popAniInterval);
+        }
+        function showAnimate() {
+                showPopImages((popAniCnt++)%imgData.length);
+        }
+        function stopAnimatePopup(){
+                if(iv) window.clearInterval(iv);
+        }
+        function popData(src,target,alt,imgpath){
+                this.src = src;
+                this.target = target;
+                this.alt = alt;
+                this.imgpath = imgpath;
+        }
+
+
+        //
+</script>
+
+<script language="javascript">
+//
+function loadMenu(left,body){
+        var f = document.subFrame;
+        if(body.indexOf("/v3/jsp/pet/cus/CusMem100_m.jsp")>-1
+        ||body.indexOf("/v3/htm/sub11/sub11_1_5.jsp")>-1){
+                f.leftURL.value = 'https://www.petronet.co.kr'+left;
+                f.bodyURL.value = 'https://www.petronet.co.kr'+body;
+                //f.sslGubun.value = 'Y';
+                f.action = 'https://www.petronet.co.kr/main2.jsp';
+        }else{
+                f.leftURL.value = left;
+                f.bodyURL.value = body;
+                f.action = '/main2.jsp';
+        }
+        f.target = "_parent";
+        f.submit();
+
+}
+function goMain(){
+        var f = document.subFrame;
+        f.action = '/v3/index.jsp';
+        f.target = "_parent";
+        f.submit();
+
+}
+function goUrl(url){
+        var f = document.subFrame;
+        f.action = url;
+        f.target = "_parent";
+        f.submit();
+
+}
+
+function goEngMain(){
+        parent.location.href = '/v3/eng/index.jsp'
+}
+function menuShow(){
+        if(document.getElementById('allmenu').style.display == "block"){
+                document.getElementById('allmenu').style.display = "none";
+                document.getElementById('img_all_menu').src = "/v3/images/top/btn_allmenu.gif";
+
+        } else {
+                document.getElementById('allmenu').style.display = "block";
+                document.getElementById('img_all_menu').src = "/v3/images/top/btn_allmenu_on.gif";
+        }
+}
+ //
+</script>
+
+</head>
+<!--  WebSAFER   -->
+<body id="mainbody_line" id="body_id_0"  onLoad="init();">
+<!--  WebSAFER   -->
+<!-- center style="width:1024px;" -->
+
+<!--     -->
+<div id="header">
+
+        <div style="width:955px;border:1px solid #418210;text-align:left;">
+                <div id="qrCode" >
+                        <img src="/v3/images/main/petronet_qr.png" alt="qrcode" width=200 />
+                </div>
+        </div>
+
+
+        <div id="top_wrap">
+                <p class="hidden"><a href="javascript:goMain();"> </a></p>
+                <h1 id="logo"><a href="javascript:goMain();"><img src="/v3/images/top/h1_logo.gif" alt="Petronet   !!" /></a></h1>
+                <p id="all_menu"><a href="javascript:menuShow();"><img id="img_all_menu" src="/v3/images/top/btn_allmenu.gif" alt="" /></a></p>
+                <!--    -->
+                <div class="menu" id="allmenu" style="display:none;">
+                        <h2><img src="images/main/h2_menu.gif" alt=" " /></h2>
+                <div></div>
+                        <div class="menu1">
+                                <h3><img src="/v3/images/main/menu_ti_1.gif" alt="" /></h3>
+                                <ul>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu1.jsp?sub=1','/v3/board/listType1.jsp?BbsId=PSBODB..TNDKORHNEWS');"><img src="/v3/images/main/menu_1_1.gif" alt="" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu1.jsp?sub=2','/v3/board/listType1.jsp?BbsId=PSBODB..OILNEWS');"><img src="/v3/images/main/menu_1_2.gif" alt="" /></a></li>
+                                        <!--
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu1.jsp?sub=3','/v3/board/listType3.jsp?BbsId=PSBODB..TPDPUBDATA');"><img src="/v3/images/main/menu_1_3.gif" alt=" &amp; " /></a></li>
+                                        -->
+                                </ul>
+
+                        </div>
+                        <div class="menu2">
+                                <h3><img src="/v3/images/main/menu_ti_2.gif" alt="" /></h3>
+                                <ul>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu2.jsp?sub=1','/v3/board/listType3.jsp?BbsId=PSBODB..TPPUBDT');"><img src="/v3/images/main/menu_2_1.gif" alt="()" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu2.jsp?sub=2','/v3/jsp/pet/prc/foreign/KDFQ0100_l.jsp');"><img src="/v3/images/main/menu_2_2.gif" alt="()" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu2.jsp?sub=3','/v3/board/listType1.jsp?BbsId=PSBODB..TNFOIL');"><img src="/v3/images/main/menu_2_3.gif" alt="()" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu2.jsp?sub=4','/v3/board/listType1.jsp?BbsId=PSBODB..TPXANSTR');"><img src="/v3/images/main/menu_2_4.gif" alt="" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu2.jsp?sub=5','/v3/jsp/pet/mak/KDPQ0400_l.jsp');"><img src="/v3/images/main/menu_2_5.gif" alt="/" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu2.jsp?sub=6','/v3/jsp/pet/sto/KDSQ0400_l.jsp');"><img src="/v3/images/main/menu_2_6.gif" alt="()" /></a></li>
+                                </ul>
+                        </div>
+                        <div class="menu3">
+                                <h3><img src="/v3/images/main/menu_ti_3.gif" alt="" /></h3>
+                                <ul>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu3.jsp?sub=1','/v3/jsp/pet/prc/korea/all/KDDQ0100_l.jsp');"><img src="/v3/images/main/menu_3_1.gif" alt="" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu3.jsp?sub=2','/v3/jsp/pet/prc/lpg/KDLQ0200_l.jsp');"><img src="/v3/images/main/menu_3_2.gif" alt="LPG" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu3.jsp?sub=3','/v3/board/listType3.jsp?BbsId=PSBODB..TPXINTOT');"><img src="/v3/images/main/menu_3_3.gif" alt="()" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu3.jsp?sub=4','/v3/jsp/pet/mak/KDPQ0100_l.jsp');"><img src="/v3/images/main/menu_3_4.gif" alt="/" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu3.jsp?sub=5','/v3/jsp/pet/mak/KDCQ0200_l.jsp');"><img src="/v3/images/main/menu_3_5.gif" alt="" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu3.jsp?sub=6','/v3/jsp/pet/tra/KDXQ0400_l.jsp');"><img src="/v3/images/main/menu_3_6.gif" alt="" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu3.jsp?sub=7','/v3/jsp/pet/mak/KDPQ0300_l.jsp');"><img src="/v3/images/main/menu_3_7.gif" alt="/" /></a></li>
+                                </ul>
+                        </div>
+                        <div class="menu4">
+                                <h3><img src="/v3/images/main/menu_ti_4.gif" alt="" /></h3>
+                                <ul>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu4.jsp?sub=1','/v3/board/listType3.jsp?BbsId=PSBODB..TBWISSUE');"><img src="/v3/images/main/menu_4_1.gif" alt="/()" /></a></li>
+<!--
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu4.jsp?sub=2','/v3/board/listType1.jsp?BbsId=PSBODB..TNPOSITION');"><img src="/v3/images/main/menu_4_2.gif" alt="()" /></a></li>
+-->
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu4.jsp?sub=3','/v3/board/listType3.jsp?BbsId=PSBODB..TPXCOTR');"><img src="/v3/images/main/menu_4_3.gif" alt="M&amp;A()" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu4.jsp?sub=7','/v3/weekDevelop/country_list.jsp?cont_cd=01&nation_cd=02&type=all');"><img src="/v3/weekDevelop/images/top/total_4_2.gif" alt="E&amp;P()" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu4.jsp?sub=4','/v3/board/listType1.jsp?BbsId=PSBODB..TBWORLDRA');"><img src="/v3/images/main/menu_4_4.gif" alt="" /></a></li>
+<!--
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu4.jsp?sub=8','/v3/board/listType1.jsp?BbsId=PSBODB..PETBOARD');"><img src="/v3/images/main/menu_4_8.gif" alt="" /></a></li>
+
+<!--
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu4.jsp?sub=5','/v3/board/listType1.jsp?BbsId=PSBODB..NEWSKILLBOARD1');"><img src="/v3/images/main/menu_4_5.gif" alt="" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu4.jsp?sub=6','/v3/board/listType1.jsp?BbsId=PSBODB..NEWSKILLBOARD5');"><img src="/v3/images/main/menu_4_6.gif" alt="" /></a></li>
+-->
+                                </ul>
+                        </div>
+                        <div class="menu5">
+                                <h3><img src="/v3/images/main/menu_ti_5.gif" alt="" /></h3>
+                                <ul>
+<!--
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu5.jsp?sub=1','/v3/board/listType21.jsp?BbsId=PSBODB..TPDMDOS');"><img src="/v3/images/main/menu_5_1.gif" alt="()" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu5.jsp?sub=2','/v3/board/listType21.jsp?BbsId=PSBODB..TPDMDOSNEWS');"><img src="/v3/images/main/menu_5_2.gif" alt="()()" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu5.jsp?sub=3','/v3/board/listType21.jsp?BbsId=PSBODB..TPDKMOS');"><img src="/v3/images/main/menu_5_3.gif" alt="KMOS()()" /></a></li>
+
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu5.jsp?sub=4','/v3/board/listType21.jsp?BbsId=PSBODB..TPDWONEWS2');"><img src="/v3/images/main/menu_5_4.gif" alt="KON()()" /></a></li>
+-->
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu5.jsp?sub=5','/v3/board/listType21.jsp?BbsId=PSBODB..SEASONOIL');"><img src="/v3/images/main/menu_5_5.gif" alt="()()" /></a></li>
+                                </ul>
+                        </div>
+                        <!--
+                        <div class="menu6">
+                                <h3><img src="/v3/images/main/menu_ti_6.gif" alt="Country Report" /></h3>
+                                <ul>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu6.jsp?sub=1','/v3/country.jsp?cont_cd=01');"><img src="/v3/images/main/menu_6_1.gif" alt="/()" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu6.jsp?sub=2','/v3/country.jsp?cont_cd=02');"><img src="/v3/images/main/menu_6_2.gif" alt="()" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu6.jsp?sub=3','/v3/country.jsp?cont_cd=03');"><img src="/v3/images/main/menu_6_3.gif" alt="/CIS()" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu6.jsp?sub=4','/v3/country.jsp?cont_cd=04');"><img src="/v3/images/main/menu_6_4.gif" alt="()" /></a></li>
+                                </ul>
+                        </div>
+                        <div class="menu7">
+                                <h3><img src="/v3/images/main/menu_ti_7.gif" alt="" /></h3>
+                                <ul>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu7.jsp?sub=1','/v3/htm/sub07/sub07_1_1.jsp');"><img src="/v3/images/main/menu_7_1.gif" alt="IEA" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu7.jsp?sub=2','/v3/htm/sub07/sub07_2.jsp');"><img src="/v3/images/main/menu_7_2.gif" alt="APEC" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu7.jsp?sub=3','/v3/htm/sub07/sub07_3.jsp');"><img src="/v3/images/main/menu_7_3.gif" alt="ASEAN+3" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu7.jsp?sub=4','/v3/htm/sub07/sub07_5_3.jsp');"><img src="/v3/images/main/menu_7_4.gif" alt="WPC" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu7.jsp?sub=5','/v3/htm/sub07/sub07_5_1.jsp');"><img src="/v3/images/main/menu_7_5.gif" alt="" /></a></li>
+                                </ul>
+                        </div>
+                        -->
+                        <div class="menu8">
+                                <h3><img src="/v3/images/main/menu_ti_8.gif" alt="" /></h3>
+                                <ul>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_etc.jsp?sub=1','/v3/htm/etc/etc_01.jsp');">
+                                        <img src="/v3/images/etc/menu_8_1.gif" alt=" " /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_etc.jsp?sub=2','/v3/htm/etc/etc_02.jsp');">
+                                        <img src="/v3/images/etc/menu_8_2.gif" alt="" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_etc.jsp?sub=3','/v3/htm/etc/etc_03.jsp');">
+                                        <img src="/v3/images/etc/menu_8_3.gif" alt="" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_etc.jsp?sub=4','/v3/htm/etc/etc_04.jsp');">
+                                        <img src="/v3/images/etc/menu_8_4.gif" alt="" /></a></li>
+                                        <!--<li><a href="javascript:loadMenu('/v3/inc/left/left_menu8.jsp?sub=1','/v3/board/listType11.jsp?BbsId=PSBODB..TDNOILCS2&SELVOLUMNM=A001');"><img src="/v3/images/main/menu_8_1.gif" alt="" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu8.jsp?sub=2','/v3/board/listType11.jsp?BbsId=PSBODB..TDNOILCS2&SELVOLUMNM=A002');"><img src="/v3/images/main/menu_8_2.gif" alt="" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu8.jsp?sub=3','/v3/board/listType11.jsp?BbsId=PSBODB..TDNOILCS2&SELVOLUMNM=A003');"><img src="/v3/images/main/menu_8_3.gif" alt="" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu8.jsp?sub=4','/v3/board/listType11.jsp?BbsId=PSBODB..TDNOILCS2&SELVOLUMNM=A004');"><img src="/v3/images/main/menu_8_4.gif" alt="" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu8.jsp?sub=5','/v3/board/listType11.jsp?BbsId=PSBODB..TDNOILCS2&SELVOLUMNM=A005');"><img src="/v3/images/main/menu_8_5.gif" alt="" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu8.jsp?sub=6','/v3/board/listType11.jsp?BbsId=PSBODB..TDNOILCS2&SELVOLUMNM=A006');"><img src="/v3/images/main/menu_8_6.gif" alt="" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu8.jsp?sub=7','/v3/board/listType1.jsp?BbsId=PSBODB..NONCOIL');"><img src="/v3/images/main/menu_8_7.gif" alt="" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu8.jsp?sub=8','/v3/htm/sub08/sub08_8_2.jsp');"><img src="/v3/images/main/menu_8_8.gif" alt="" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu8.jsp?sub=9','/v3/htm/sub08/sub08_9_1.jsp');"><img src="/v3/images/main/menu_8_9.gif" alt="/" /></a></li>
+                                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu8.jsp?sub=10','/v3/board/listType11.jsp?BbsId=PSBODB..TDNOILCS2&SELVOLUMNM=A007');"><img src="/v3/images/main/menu_8_10.gif" alt="" /></a></li>-->
+                                </ul>
+                        </div>
+                </div>
+                <!--   -->
+                <ul id="gnb">
+                        <li><a href="javascript:goMain();"><img src="/v3/images/top/gnb_1.gif" alt="" /></a></li>
+                        <li><a href="javascript:loadMenu('/v3/inc/left/left_menu11.jsp?sub=10','/v3/htm/sub11/sub11_10.jsp');"><img src="/v3/images/top/gnb_2.gif" alt="" /></a></li>
+                        <li class="last_gnb"><a href="javascript:loadMenu('/v3/inc/left/left_menu10.jsp?sub=1','/v3/htm/sub10/sub10_1_1.jsp');"><img src="/v3/images/top/gnb_3.gif" alt="xx" /></a></li>
+<!--                    <li class="voice"><a href="#"><img src="/v3/images/top/btn_voice.gif" alt="" /></a></li> -->
+                        <li><a href="javascript:goEngMain();"><img src="/v3/images/top/bnt_eng.gif" alt="ENGLISH" /></a></li>
+                </ul>
+        </div>
+        <ul id="lnb"><!--    -->
+                        <li id="top-menu01"><img src="/v3/images/top/blank.gif" /> </li>
+                        <li id="top-menu02"><img src="/v3/images/top/blank.gif" /> </li>
+                <li id="top-menu1"><a href="javascript:loadMenu('/v3/inc/left/left_menu1.jsp?sub=1','/v3/board/listType1.jsp?BbsId=PSBODB..TNDKORHNEWS');" id="top-menu-head1"><img src="/v3/images/top/lnb_1.gif" alt="" /></a>
+                        <ul id="top-sub-menu1" class="lnb_sub_1" style="left:90px;">
+                                <li class="first_sub_lnb"><a href="javascript:loadMenu('/v3/inc/left/left_menu1.jsp?sub=1','/v3/board/listType1.jsp?BbsId=PSBODB..TNDKORHNEWS');"><img src="/v3/images/top/lnb_1_1.gif" alt="" /></a></li>
+                                <li class="last_sub_lnb"><a href="javascript:loadMenu('/v3/inc/left/left_menu1.jsp?sub=2','/v3/board/listType1.jsp?BbsId=PSBODB..OILNEWS');"><img src="/v3/images/top/lnb_1_2.gif" alt="" /></a></li>
+                                <!--
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu1.jsp?sub=3','/v3/board/listType3.jsp?BbsId=PSBODB..TPDPUBDATA');"><img src="/v3/images/top/lnb_1_3.gif" alt=" & " /></a></li>
+                                -->
+                        </ul>
+                </li>
+                <li id="top-menu2"><a href="javascript:loadMenu('/v3/inc/left/left_menu2.jsp?sub=1','/v3/board/listType3.jsp?BbsId=PSBODB..TPPUBDT');" id="top-menu-head2"><img src="/v3/images/top/lnb_2.gif" alt="" /></a>
+                        <ul id="top-sub-menu2" class="lnb_sub_2">
+                                <li class="first_sub_lnb"><a href="javascript:loadMenu('/v3/inc/left/left_menu2.jsp?sub=1','/v3/board/listType3.jsp?BbsId=PSBODB..TPPUBDT');"><img src="/v3/images/top/lnb_2_1.gif" alt="/" /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu2.jsp?sub=2','/v3/jsp/pet/prc/foreign/KDFQ0100_l.jsp');"><img src="/v3/images/top/lnb_2_2.gif" alt="" /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu2.jsp?sub=3','/v3/board/listType1.jsp?BbsId=PSBODB..TNFOIL');"><img src="/v3/images/top/lnb_2_3.gif" alt="" /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu2.jsp?sub=4','/v3/board/listType1.jsp?BbsId=PSBODB..TPXANSTR');"><img src="/v3/images/top/lnb_2_4.gif" alt="" /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu2.jsp?sub=5','/v3/jsp/pet/mak/KDPQ0400_l.jsp');"><img src="/v3/images/top/lnb_2_5.gif" alt="/" /></a></li>
+                                <li class="last_sub_lnb"><a href="javascript:loadMenu('/v3/inc/left/left_menu2.jsp?sub=6','/v3/jsp/pet/sto/KDSQ0400_l.jsp');"><img src="/v3/images/top/lnb_2_6.gif" alt="" /></a></li>
+                        </ul>
+                </li>
+                <li id="top-menu3"><a href="javascript:loadMenu('/v3/inc/left/left_menu3.jsp?sub=1','/v3/jsp/pet/prc/korea/all/KDDQ0100_l.jsp');" id="top-menu-head3"><img src="/v3/images/top/lnb_3.gif" alt="" /></a>
+                        <ul id="top-sub-menu3" class="lnb_sub_3" style="left:180px;">
+                                <li class="first_sub_lnb"><a href="javascript:loadMenu('/v3/inc/left/left_menu3.jsp?sub=1','/v3/jsp/pet/prc/korea/all/KDDQ0100_l.jsp');"><img src="/v3/images/top/lnb_3_1.gif" alt="" /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu3.jsp?sub=2','/v3/jsp/pet/prc/lpg/KDLQ0200_l.jsp');"><img src="/v3/images/top/lnb_3_2.gif" alt="LPG" /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu3.jsp?sub=3','/v3/board/listType3.jsp?BbsId=PSBODB..TPXINTOT');"><img src="/v3/images/top/lnb_3_3.gif" alt="" /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu3.jsp?sub=4','/v3/jsp/pet/mak/KDPQ0100_l.jsp');"><img src="/v3/images/top/lnb_3_4.gif" alt="/" /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu3.jsp?sub=5','/v3/jsp/pet/mak/KDCQ0200_l.jsp');"><img src="/v3/images/top/lnb_3_5.gif" alt="" /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu3.jsp?sub=6','/v3/jsp/pet/tra/KDXQ0400_l.jsp');"><img src="/v3/images/top/lnb_3_6.gif" alt="" /></a></li>
+                                <li class="last_sub_lnb"><a href="javascript:loadMenu('/v3/inc/left/left_menu3.jsp?sub=7','/v3/jsp/pet/mak/KDPQ0300_l.jsp');"><img src="/v3/images/top/lnb_3_7.gif" alt="/" /></a></li>
+                        </ul>
+                </li>
+                <li id="top-menu4"><a href="javascript:loadMenu('/v3/inc/left/left_menu4.jsp?sub=1','/v3/board/listType3.jsp?BbsId=PSBODB..TBWISSUE');" id="top-menu-head4"><img src="/v3/images/top/lnb_4.gif" alt="" /></a>
+                        <ul id="top-sub-menu4" class="lnb_sub_4">
+                                <li class="first_sub_lnb"><a href="javascript:loadMenu('/v3/inc/left/left_menu4.jsp?sub=1','/v3/board/listType3.jsp?BbsId=PSBODB..TBWISSUE');"><img src="/v3/images/top/lnb_4_1.gif" alt="/" /></a></li>
+<!--
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu4.jsp?sub=2','/v3/board/listType1.jsp?BbsId=PSBODB..TNPOSITION');"><img src="/v3/images/top/lnb_4_2.gif" alt="" /></a></li>
+-->
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu4.jsp?sub=3','/v3/board/listType3.jsp?BbsId=PSBODB..TPXCOTR');"><img src="/v3/images/top/lnb_4_3.gif" alt="M&amp;A" /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu4.jsp?sub=7','/v3/weekDevelop/country_list.jsp?cont_cd=01&nation_cd=02&type=all');"><img src="/v3/weekDevelop/images/top/lnb_4_7.gif" alt=" E&P " /></a></li>
+                                <li class="last_sub_lnb"><a href="javascript:loadMenu('/v3/inc/left/left_menu4.jsp?sub=4','/v3/board/listType1.jsp?BbsId=PSBODB..TBWORLDRA');"><img src="/v3/images/top/lnb_4_4.gif" alt="" /></a></li>
+<!--
+                                <li class="last_sub_lnb"><a href="javascript:loadMenu('/v3/inc/left/left_menu4.jsp?sub=8','/v3/board/listType1.jsp?BbsId=PSBODB..PETBOARD');"><img src="/v3/images/top/lnb_4_8.gif" alt="" /></a></li>
+
+<!--
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu4.jsp?sub=5','/v3/board/listType1.jsp?BbsId=PSBODB..NEWSKILLBOARD1');"><img src="/v3/images/top/lnb_4_5.gif" alt="" /></a></li>
+                                <li class="last_sub_lnb"><a href="javascript:loadMenu('/v3/inc/left/left_menu4.jsp?sub=6','/v3/board/listType1.jsp?BbsId=PSBODB..NEWSKILLBOARD5');"><img src="/v3/images/top/lnb_4_6.gif" alt="" /></a></li>
+-->
+                        </ul>
+                </li>
+                <li id="top-menu5"><a href="javascript:loadMenu('/v3/inc/left/left_menu5.jsp?sub=5','/v3/board/listType21.jsp?BbsId=PSBODB..SEASONOIL');" id="top-menu-head5"><img src="/v3/images/top/lnb_5.gif" alt="" /></a>
+                        <ul id="top-sub-menu5" class="lnb_sub_5">
+                        <!--
+                                <li class="first_sub_lnb"><a href="javascript:loadMenu('/v3/inc/left/left_menu5.jsp?sub=1','/v3/board/listType21.jsp?BbsId=PSBODB..TPDMDOS');"><img src="/v3/images/top/lnb_5_1.gif" alt="" /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu5.jsp?sub=2','/v3/board/listType21.jsp?BbsId=PSBODB..TPDMDOSNEWS');"><img src="/v3/images/top/lnb_5_2.gif" alt="()" /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu5.jsp?sub=3','/jsp/pet/pub/TPDKMOS.jsp');"><img src="/v3/images/top/lnb_5_3.gif" alt="KMOS()" /></a></li>
+
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu5.jsp?sub=4','/jsp/pet/pub/TPDWONEWS2.jsp');"><img src="/v3/images/top/lnb_5_4.gif" alt="KON()" /></a></li>
+
+                                <li class="last_sub_lnb"><a href="javascript:loadMenu('/v3/inc/left/left_menu5.jsp?sub=5','/v3/board/listType21.jsp?BbsId=PSBODB..SEASONOIL');"><img src="/v3/images/top/lnb_5_5.gif" alt="()" /></a></li>
+                                -->
+                        </ul>
+                </li>
+                <!--
+                <li id="top-menu6"><a href="javascript:loadMenu('/v3/inc/left/left_menu6.jsp?sub=1','/v3/country.jsp');" id="top-menu-head6"><img src="/v3/images/top/lnb_6.gif" alt="Country Report" /></a>
+                        <ul id="top-sub-menu6" class="lnb_sub_6">
+                                <li class="first_sub_lnb"><a href="javascript:loadMenu('/v3/inc/left/left_menu6.jsp?sub=1','/v3/country.jsp?cont_cd=01');"><img src="/v3/images/top/lnb_6_1.gif" alt="/" /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu6.jsp?sub=2','/v3/country.jsp?cont_cd=02');"><img src="/v3/images/top/lnb_6_2.gif" alt="" /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu6.jsp?sub=3','/v3/country.jsp?cont_cd=03');"><img src="/v3/images/top/lnb_6_3.gif" alt="/CIS" /></a></li>
+                                <li class="last_sub_lnb"><a href="javascript:loadMenu('/v3/inc/left/left_menu6.jsp?sub=4','/v3/country.jsp?cont_cd=04');"><img src="/v3/images/top/lnb_6_4.gif" alt="" /></a></li>
+                -->
+<!--
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu6.jsp?sub=5','/v3/country.jsp?cont_cd=05');"><img src="/v3/images/top/lnb_6_5.gif" alt="(/) " /></a></li>
+                        </ul>
+                </li>
+                <li id="top-menu7"><a href="javascript:loadMenu('/v3/inc/left/left_menu7.jsp?sub=1','/v3/htm/sub07/sub07_1_1.jsp');" id="top-menu-head7"><img src="/v3/images/top/lnb_7.gif" alt="" /></a>
+                        <ul id="top-sub-menu7" class="lnb_sub_7">
+                                <li class="first_sub_lnb"><a href="javascript:loadMenu('/v3/inc/left/left_menu7.jsp?sub=1','/v3/htm/sub07/sub07_1_1.jsp');"><img src="/v3/images/top/lnb_7_1.gif" alt="IEA" /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu7.jsp?sub=2','/v3/htm/sub07/sub07_2.jsp');"><img src="/v3/images/top/lnb_7_2.gif" alt="APEC" /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu7.jsp?sub=3','/v3/htm/sub07/sub07_3.jsp');"><img src="/v3/images/top/lnb_7_3.gif" alt="ASEAN+3" /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu7.jsp?sub=4','/v3/htm/sub07/sub07_5_3.jsp');"><img src="/v3/images/top/lnb_7_4.gif" alt="WPC" /></a></li>
+                                <li class="last_sub_lnb"><a href="javascript:loadMenu('/v3/inc/left/left_menu7.jsp?sub=5','/v3/htm/sub07/sub07_5_1.jsp');"><img src="/v3/images/top/lnb_7_5.gif" alt="" /></a></li>
+                        </ul>
+-->
+                </li>
+                <li id="top-menu8" class="last_lnb"><a href="javascript:loadMenu('/v3/inc/left/left_etc.jsp?sub=1','/v3/htm/etc/etc_01.jsp');" id="top-menu-head8"><img src="/v3/images/top/lnb_8.gif" alt="" /></a>
+                        <ul id="top-sub-menu8" class="lnb_sub_8" style="left:600px;">
+                                <li class="first_sub_lnb"><a href="javascript:loadMenu('/v3/inc/left/left_etc.jsp?sub=1','/v3/htm/etc/etc_01.jsp');"><img src="/v3/images/etc/lnb_8_1.gif" alt=" " /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_etc.jsp?sub=2','/v3/htm/etc/etc_02.jsp');"><img src="/v3/images/etc/lnb_8_2.gif" alt=" " /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_etc.jsp?sub=3','/v3/htm/etc/etc_03.jsp');"><img src="/v3/images/etc/lnb_8_3.gif" alt=" " /></a></li>
+
+                                <li class="last_sub_lnb"><a href="javascript:loadMenu('/v3/inc/left/left_etc.jsp?sub=4','/v3/htm/etc/etc_04.jsp');"><img src="/v3/images/etc/lnb_8_4.gif" alt="     " /></a></li>
+
+                                <!--<li class="first_sub_lnb"><a href="javascript:loadMenu('/v3/inc/left/left_menu8.jsp?sub=1','/v3/board/listType11.jsp?BbsId=PSBODB..TDNOILCS2&SELVOLUMNM=A001');"><img src="/v3/images/top/lnb_8_1.gif" alt="" /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu8.jsp?sub=2','/v3/board/listType11.jsp?BbsId=PSBODB..TDNOILCS2&SELVOLUMNM=A002');"><img src="/v3/images/top/lnb_8_2.gif" alt="" /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu8.jsp?sub=3','/v3/board/listType11.jsp?BbsId=PSBODB..TDNOILCS2&SELVOLUMNM=A003');"><img src="/v3/images/top/lnb_8_3.gif" alt="" /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu8.jsp?sub=4','/v3/board/listType11.jsp?BbsId=PSBODB..TDNOILCS2&SELVOLUMNM=A004');"><img src="/v3/images/top/lnb_8_4.gif" alt="" /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu8.jsp?sub=5','/v3/board/listType11.jsp?BbsId=PSBODB..TDNOILCS2&SELVOLUMNM=A005');"><img src="/v3/images/top/lnb_8_5.gif" alt=" " /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu8.jsp?sub=6','/v3/board/listType11.jsp?BbsId=PSBODB..TDNOILCS2&SELVOLUMNM=A006');"><img src="/v3/images/top/lnb_8_6.gif" alt="" /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu8.jsp?sub=7','/v3/board/listType1.jsp?BbsId=PSBODB..NONCOIL');"><img src="/v3/images/top/lnb_8_7.gif" alt="" /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu8.jsp?sub=8','/v3/htm/sub08/sub08_8_2.jsp');"><img src="/v3/images/top/lnb_8_8.gif" alt="" /></a></li>
+                                <li><a href="javascript:loadMenu('/v3/inc/left/left_menu8.jsp?sub=9','/v3/htm/sub08/sub08_9_1.jsp');"><img src="/v3/images/top/lnb_8_9.gif" alt="/" /></a></li>
+                                <li class="last_sub_lnb"><a href="javascript:loadMenu('/v3/inc/left/left_menu8.jsp?sub=10','/v3/board/listType11.jsp?BbsId=PSBODB..TDNOILCS2&SELVOLUMNM=A007');"><img src="/v3/images/top/lnb_8_10.gif" alt="" /></a></li>-->
+                        </ul>
+                </li>
+        </ul><!--    -->
+
+        <script type="text/javascript">initTopmenuByMenuId(0,0,0,0,"");</script>
+</div>
+<form name="subFrame" method="post">
+<input type="hidden" name="leftURL"/>
+<input type="hidden" name="bodyURL"/>
+<input type="hidden" name="gubun" value=""/>
+<input type="hidden" name="aa"  value=""/>
+<input type="hidden" name="bb"  value=""/>
+<input type="hidden" name="sslGubun"  value=""/>
+
+
+</form>
+
+<!--      -->
+<hr />
+<div class="main_top">
+        <div  class="main_top_wrap">
+                <div class="visual">
+
+                        <img src="/v3/images/main/main.jpg" alt="     " />
+                </div>
+                <div class="update" id="3_update"  style="display:none;" >
+                        <ul>
+                                <li class="h3_update"><a href="javascript:chgMain('3_update','3_popupzone');"><img id="img_3_update" src="/v3/images/main/h3_update_on.gif" alt=" " /></a></li>
+                                <li class="h3_popupzone"><a href="javascript:chgMain('3_popupzone','3_update');"><img id="img_3_popupzone" src="/v3/images/main/h3_popupzone.gif" alt="" /></a></li>
+                        </ul>
+
+
+
+                </div>
+                <div class="popupzone" id="3_popupzone">
+                        <ul>
+                                <!--li class="h3_update"><a href="javascript:chgMain('3_update','3_popupzone');"><img src="/v3/images/main/h3_update.gif" alt=" " /></a></li-->
+                                <li class="h3_popupzone"><a href="javascript:chgMain('3_popupzone','3_update');"><img src="/v3/images/main/h3_popupzone_on.gif" alt="" /></a></li>
+                        </ul>
+
+
+                        <div class="wrap_popupzone">
+                                <ul class="number">
+
+                                <li id="popup_image_link0"><a href="#popup_01" onclick="showPopImages(0)" onkeypress="return true;" class="popupbtn1"><img src="/v3/images/main/img_popupzone_num1_on.gif" alt="1" id="popNum1" /></a>
+                                </li>
+
+                                </ul>
+
+                                <ul class="control">
+                                        <li><a href=""><!-- img src="/v3/images/main/btn_popupzone_back.gif" alt="" /> --></a></li>
+                                        <li><span id = "popup_stop"><a href="#popup_stop" onclick="stopAnimatePopup()" onkeypress="return true;"><img src="/v3/images/main/btn_popupzone_stop.gif" alt="" /></a></span></li>
+                                        <li><span id = "popup_play"><a href="#popup_play" onclick="animatePopup()" onkeypress="return true;"><img src="/v3/images/main/btn_popupzone_play.gif" alt="" /></a></span></li>
+                                        <li></li>
+                                </ul>
+
+                        <script type="text/javascript">
+                                imgData[0] = new popData(" ","_blank","xx ","pet_eval.png");
+                        </script>
+                        <p id="popup_01"><img src="/dvboard/popZone/upload/pet_eval.png" alt="ù " width="300" height="70" id="popImg1" target="_blank"/></p>
+                        </div>
+                </div>
+        </div>
+</div>
+
+<iframe name="ttsFrame" width="0" height="0"></iframe>
+<script>
+function qrv(a){
+        document.getElementById('qrkkde').style.display = a;
+        if(a == 'block'){
+                document.getElementById('qrImg').src = '/v3/images/main/qr_icon1.jpg';
+        }else{
+                document.getElementById('qrImg').src = '/v3/images/main/qr_icon.jpg';
+        }
+}
+</script>
+<!-- /center -->
+</body>
+</html>
